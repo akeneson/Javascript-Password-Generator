@@ -9,6 +9,10 @@ var passwordLength = prompt("How many characters long would you lik your passwor
 
 var lowerCase = confirm("Would you like your password to contain lowercase letters?");
 
+// This will be the boolean variable to confirm if the user would like to include uppercase characters
+
+var upperCase = confirm("Would you like your password to contain uppercase letters?");
+
 
 
 
