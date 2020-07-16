@@ -32,6 +32,10 @@ var specialCharacter = confirm("Would you like your password to contain special 
 var specialCharactersArray = ["`","!","@","#","$","%","^","&","*","(",")","-","+","=","<",">","/","?",":",";","{","}","[","]"];
 
 // Output loop to validate users choices
+// If all 3 are true
+if (lowerCase== true && upperCase==true && specialCharacter==true){
+var confirmLowerUpperSpecial = confirm ("You would like to use lowercase letters, uppercase letters, and special characters")
+}
 
 // Output Loop to validate that atleast one character type is selected
 
