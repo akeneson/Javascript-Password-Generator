@@ -5,6 +5,11 @@ var generateBtn = document.querySelector("#generate");
 
 var passwordLength = prompt("How many characters long would you lik your password to be? (8-128 characters)");
 
+// This will be the boolean variable to confirm if the user would like to include lowercase characters
+
+var lowerCase = confirm("Would you like your password to contain lowercase letters?");
+
+
 
 
 // Write password to the #password input
