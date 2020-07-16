@@ -13,6 +13,13 @@ var lowerCase = confirm("Would you like your password to contain lowercase lette
 
 var upperCase = confirm("Would you like your password to contain uppercase letters?");
 
+// This will be the boolean variable to confirm if the user would like to include special characters
+
+var specialCharacters = confirm("Would you like your password to contain special characters");
+
+// Output loop to validate users choices
+
+// Output Loop to validate that atleast one character type is selected
 
 
 
