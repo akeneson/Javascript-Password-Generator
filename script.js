@@ -5,9 +5,15 @@ var generateBtn = document.querySelector("#generate");
 
 var passwordLength = prompt("How many characters long would you lik your password to be? (8-128 characters)");
 
+// ---------To ensure that password is between 8 and 128 (unsure if it will work)  ALSO need to see how to stop the code if an invalid number is entered again
+// if (passwordLength < 8 || passwordLength > 128){
+//   var passwordlength = prompt("Please enter a number between 8 and 128 for which you would like the length of your password to be")
+// }
+
 // This will be the boolean variable to confirm if the user would like to include lowercase characters
 
 var lowerCase = confirm("Would you like your password to contain lowercase letters?");
+var lowerCaseCharactersArray = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","x","y","z"];
 
 // This will be the boolean variable to confirm if the user would like to include uppercase characters
 
