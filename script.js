@@ -26,7 +26,10 @@ var upperCaseCharactersArray = ["A","B","C","D","E","F","G","H","I","J","K","L",
 
 // This will be the boolean variable to confirm if the user would like to include special characters
 
-var specialCharacters = confirm("Would you like your password to contain special characters");
+var specialCharacter = confirm("Would you like your password to contain special characters");
+
+// This variable holds an array of special characters
+var specialCharactersArray = ["`","!","@","#","$","%","^","&","*","(",")","-","+","=","<",">","/","?",":",";","{","}","[","]"];
 
 // Output loop to validate users choices
 
