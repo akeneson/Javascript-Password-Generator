@@ -31,14 +31,51 @@ var specialCharacter = confirm("Would you like your password to contain special 
 // This variable holds an array of special characters
 var specialCharactersArray = ["`","!","@","#","$","%","^","&","*","(",")","-","+","=","<",">","/","?",":",";","{","}","[","]"];
 
-// Output loop to validate users choices
-// If all 3 are true
-if (lowerCase== true && upperCase==true && specialCharacter==true){
-var confirmLowerUpperSpecial = confirm ("You would like to use lowercase letters, uppercase letters, and special characters")
-}
 
 // Output Loop to validate that atleast one character type is selected
-
+while (lowerCase==true || upperCase==true || specialCharacter==true){
+  if (lowerCase==false && upperCase==false && specialCharacter==false){
+    var undefined = confirm ("Unable to create characters without chosing one character")
+    break;
+  }
+  // Output loop to validate users choices
+  // If all 3 are true
+  if (lowerCase== true && upperCase==true && specialCharacter==true); {
+    var confirmLowerUpperSpecial = confirm ("You would like to use lowercase letters, uppercase letters, and special characters");
+    break;
+  }
+}
+// --------------------------
+// If the user wants lower and upper case only
+//   if(lowerCase==true && upperCase==true && specialCharacter==false); {
+//       var confirmLowerUpper = confirm("You would like to use lowercase and upper case letters only");
+//     }
+// }
+// ---------------------------
+// If the user wants lower case only
+// else (lowerCase==true && upperCase==false && specialCharacter==false);{
+//   var confirmLower = confirm ("You only want lower case letters used");
+// }
+// ----------------------------
+// If the user wants upper case only
+// else (lowerCase==false && upperCase==true && specialCharacter==false); {
+//   var confirmUpper = confirm (" You only like to use upper case letters");
+// }
+// -----------------------------
+// If the user wants special characters only
+// else (lowerCase==false && upperCase==false && specialCharacter==true); {
+//   var confirmSpecial = confirm ("You only like to use special characters");
+// }
+// ------------------------------
+// If the user wants to use lower case letters and special characters
+// else (lowerCase==true && upperCase==false && specialCharacter==true);{
+//   var confirmLowerSpecial = confirm ("You want to use lower case letters and special characters");
+// }
+// -------------------------------
+// If the user wants to use upper case letters and special characters
+// else (lowerCase==false && upperCase==true && specialCharacter==true);{
+//   var confirmUpperSpecial = comfirm("You want to use uppercase letters and special characters");
+// }
 
 
 // Write password to the #password input
