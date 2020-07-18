@@ -24,33 +24,47 @@ var passwordLength = prompt("How many characters long would you lik your passwor
 
 // This will be the boolean variable to confirm if the user would like to include lowercase characters
 var lowerCase = confirm("Would you like your password to contain lowercase letters?");
+console.log(lowerCase);
 
 // This will be the boolean variable to confirm if the user would like to include uppercase characters
 var upperCase = confirm("Would you like your password to contain uppercase letters?");
+console.log(upperCase);
 
 // This will be the boolean variable to confirm if the user would like to include special characters
 var specialCharacter = confirm("Would you like your password to contain special characters");
+console.log(specialCharacter);
 
 var numericCharacter = confirm ("Would you like your password to contain a number");
+console.log(numericCharacter);
 
 
 
-// ------------------>Random Character <--------------------
+// ------------------>Random Character DO I NEED TO MAKE THESE FUNCTIONS SO I CAN CALL THE RANDOM FUNCTION EACH TIME????? <--------------------
+
+// Attempt at function for random
+function getRandom(arr){
+      
+      //we loop through the array once
+      for (var i = 0; i < 1; i++){
+            var randomValue = arr[Math.floor(Math.random() * arr.length)];
+            console.log(randomValue);
+            console.log("---------")
+            return randomValue;
+      }
+}
+
+
 // This variable grabs a random uppercase letter from the array
-var myLower= lowerCaseCharactersArray[Math.floor(Math.random() * lowerCaseCharactersArray.length)];
-console.log(myLower);
+getRandom(lowerCaseCharactersArray);
 
 // This variable grabs a random uppercase letter from the array
-var myUpper = upperCaseCharactersArray[Math.floor(Math.random() * upperCaseCharactersArray.length)];
-console.log(myUpper);
+getRandom (upperCaseCharactersArray);
 
 // This variable grabs a random special character from the list of array
-var mySpecial = specialCharactersArray[Math.floor(Math.random() * specialCharactersArray.length)];
-console.log(mySpecial);
+getRandom (specialCharactersArray);
 
 // This variable grabs a random numeric character
-var myNumeric = numberCharacterArray[Math.floor(Math.random() * numberCharacterArray.length)];
-console.log(myNumeric);
+getRandom(numberCharacterArray);
 
 // Output Loop to validate that atleast one character type is selected
 // if (lowerCase==false && upperCase==false && specialCharacter==false){
@@ -58,17 +72,23 @@ console.log(myNumeric);
 //     break;
 // }
 //   // Output loop to validate users choices
+
 //   // If all 3 are true
-if (lowerCase== true && upperCase==true && specialCharacter==true); {
+if ((lowerCase=== true) && (upperCase===true) && (specialCharacter===true)&& (numericCharacter===true)) {
       var confirmLowerUpperSpecial = confirm ("You would like to use lowercase letters, uppercase letters, and special characters");
       // STILL LOGGING TRUE, WHEN FALSE.
       console.log(confirmLowerUpperSpecial);
-}
+} 
+
+// // else {
+//       alert("There are not any characters selected to make your password");
+// }
 
 
 
-//     // This variables holds an array of the chosen random characters from all three character arrays
-//     var randomLowerUpperSpecial = [myLower, myUpper, mySpecial];
+//     // This variables holds an array of the chosen random characters from all three character arrays --to randomized further
+var randomLowerUpperSpecialNumeric = [getRandom(lowerCaseCharactersArray), getRandom(upperCaseCharactersArray), getRandom (specialCharactersArray), getRandom(numberCharacterArray)];
+
 
 //     // This variable chooses from the character from the above array
 //     var random3 = randomLowerUpperSpecial[Math.floor(Math.random() * randomLowerUpperSpecial.length)];
