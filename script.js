@@ -39,9 +39,8 @@ console.log(numericCharacter);
 
 
 
-// ------------------>Random Character DO I NEED TO MAKE THESE FUNCTIONS SO I CAN CALL THE RANDOM FUNCTION EACH TIME????? <--------------------
+// ------------------>Random Character <--------------------
 
-// Attempt at function for random
 function getRandom(arr){
       
       //we loop through the array once
@@ -73,27 +72,59 @@ getRandom(numberCharacterArray);
 // }
 //   // Output loop to validate users choices
 
-//   // If all 3 are true
-if ((lowerCase=== true) && (upperCase===true) && (specialCharacter===true)&& (numericCharacter===true)) {
-      var confirmLowerUpperSpecial = confirm ("You would like to use lowercase letters, uppercase letters, and special characters");
-      // STILL LOGGING TRUE, WHEN FALSE.
-      console.log(confirmLowerUpperSpecial);
-} 
-
-// // else {
-//       alert("There are not any characters selected to make your password");
-// }
 
 
+// This ensures that one type of character is chosen to make the password
+function validity (){
+      if ((lowerCase=== true) || (upperCase===true) || (specialCharacter===true) || (numericCharacter===true)) {
+            var confirmLowerUpperSpecialNumeric = confirm ("You would like to use lowercase letters, uppercase letters, and special characters");
+      console.log(confirmLowerUpperSpecialNumeric);
+      } else {
+            alert("There are not any characters selected to make your password");
+      }
+}
 
-//     // This variables holds an array of the chosen random characters from all three character arrays --to randomized further
+
+
+for (i = 0; i<1; i++) {
+      var userCharacterArray = [];
+      if (lowerCase === true){
+            userCharacterArray.push (lowerCaseCharactersArray);
+      } 
+      if (upperCase === true){
+            userCharacterArray.push(upperCaseCharactersArray);
+      }
+      if (specialCharacter === true) {
+            userCharacterArray.push (specialCharactersArray);
+      } 
+      if (numericCharacter=== true) {
+            userCharacterArray.push(numberCharacterArray);
+      }
+      for (i = 0; i<userCharacterArray.length1; i++){
+            console.log(userCharacterArray[i]);
+      }
+}
+
+
+
+//     // This variables holds an array of the chosen random characters from all four character arrays --to randomized further
+console.log("These are the characters chosen if the user wanted a lower, upper, special, and numberic character");
 var randomLowerUpperSpecialNumeric = [getRandom(lowerCaseCharactersArray), getRandom(upperCaseCharactersArray), getRandom (specialCharactersArray), getRandom(numberCharacterArray)];
+
+// This variable holds an array of the chosen random characters from lower, uppper, and special charcters
+console.log("These are the characters chosen if the user wanted a lower, upper, and special character");
+var randomLowerUpperSpecial = [getRandom(lowerCaseCharactersArray), getRandom(upperCaseCharactersArray), getRandom (specialCharactersArray)];
+
+
+
+
+
+
+
 
 
 //     // This variable chooses from the character from the above array
-//     var random3 = randomLowerUpperSpecial[Math.floor(Math.random() * randomLowerUpperSpecial.length)];
-//     break;
-// }
+getRandom(randomLowerUpperSpecialNumeric)
  
 // --------------------------
 // If the user wants lower and upper case only
