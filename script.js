@@ -1,7 +1,7 @@
 // Assignment Code
+// This variable gets the element "generate" which is a button, and becomes a string.
 var generateBtn = document.querySelector("#generate");
 
-// ------------------>GLOBAL VARIABLES<--------------------
 // This variable holds an array of lower case letters
 var lowerCaseCharactersArray = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","x","y","z"];
 // This variable holds an array of upper case letters
@@ -44,7 +44,7 @@ console.log(numericCharacter);
 function getRandom(arr){
       
       //we loop through the array once
-      for (var i = 0; i < 1; i++){
+      for (i = 0; i < 1; i++){
             var randomValue = arr[Math.floor(Math.random() * arr.length)];
             console.log(randomValue);
             console.log("---------")
@@ -52,135 +52,43 @@ function getRandom(arr){
       }
 }
 
-
+console.log("The password Length is "+ passwordLength + " characters.");
 // This variable grabs a random uppercase letter from the array
 getRandom(lowerCaseCharactersArray);
-
 // This variable grabs a random uppercase letter from the array
 getRandom (upperCaseCharactersArray);
-
 // This variable grabs a random special character from the list of array
 getRandom (specialCharactersArray);
-
 // This variable grabs a random numeric character
 getRandom(numberCharacterArray);
 
-// Output Loop to validate that atleast one character type is selected
-// if (lowerCase==false && upperCase==false && specialCharacter==false){
-//     var undefined = confirm ("Unable to create characters without chosing one character");
-//     break;
-// }
-//   // Output loop to validate users choices
+
+// I want to create a variable array called user array, and placed all the choices of characters that the user chose.
 
 
-
-// This ensures that one type of character is chosen to make the password
-function validity (){
-      if ((lowerCase=== true) || (upperCase===true) || (specialCharacter===true) || (numericCharacter===true)) {
-            var confirmLowerUpperSpecialNumeric = confirm ("You would like to use lowercase letters, uppercase letters, and special characters");
-      console.log(confirmLowerUpperSpecialNumeric);
-      } else {
-            alert("There are not any characters selected to make your password");
-      }
-}
-
-
-
-for (i = 0; i<1; i++) {
-      var userCharacterArray = [];
-      if (lowerCase === true){
-            userCharacterArray.push (lowerCaseCharactersArray);
-      } 
-      if (upperCase === true){
-            userCharacterArray.push(upperCaseCharactersArray);
-      }
-      if (specialCharacter === true) {
-            userCharacterArray.push (specialCharactersArray);
-      } 
-      if (numericCharacter=== true) {
-            userCharacterArray.push(numberCharacterArray);
-      }
-      for (i = 0; i<userCharacterArray.length1; i++){
-            console.log(userCharacterArray[i]);
-      }
-}
-
-
-
-//     // This variables holds an array of the chosen random characters from all four character arrays --to randomized further
-console.log("These are the characters chosen if the user wanted a lower, upper, special, and numberic character");
-var randomLowerUpperSpecialNumeric = [getRandom(lowerCaseCharactersArray), getRandom(upperCaseCharactersArray), getRandom (specialCharactersArray), getRandom(numberCharacterArray)];
-
-// This variable holds an array of the chosen random characters from lower, uppper, and special charcters
-console.log("These are the characters chosen if the user wanted a lower, upper, and special character");
-var randomLowerUpperSpecial = [getRandom(lowerCaseCharactersArray), getRandom(upperCaseCharactersArray), getRandom (specialCharactersArray)];
-
-
-
-
-
-
-
-
-
-//     // This variable chooses from the character from the above array
-getRandom(randomLowerUpperSpecialNumeric)
- 
-// --------------------------
-// If the user wants lower and upper case only
-//   if(lowerCase==true && upperCase==true && specialCharacter==false); {
-//       var confirmLowerUpper = confirm("You would like to use lowercase and upper case letters only");
-//     }
-// }
-// ---------------------------
-// If the user wants lower case only
-// else (lowerCase==true && upperCase==false && specialCharacter==false);{
-//   var confirmLower = confirm ("You only want lower case letters used");
-// }
-// ----------------------------
-// If the user wants upper case only
-// else (lowerCase==false && upperCase==true && specialCharacter==false); {
-//   var confirmUpper = confirm (" You only like to use upper case letters");
-// }
-// -----------------------------
-// If the user wants special characters only
-// else (lowerCase==false && upperCase==false && specialCharacter==true); {
-//   var confirmSpecial = confirm ("You only like to use special characters");
-// }
-// ------------------------------
-// If the user wants to use lower case letters and special characters
-// else (lowerCase==true && upperCase==false && specialCharacter==true);{
-//   var confirmLowerSpecial = confirm ("You want to use lower case letters and special characters");
-// }
-// -------------------------------
-// If the user wants to use upper case letters and special characters
-// else (lowerCase==false && upperCase==true && specialCharacter==true);{
-//   var confirmUpperSpecial = comfirm("You want to use uppercase letters and special characters");
-// }
 
 
 // Write password to the #password input
-
-
-// function generatePassword(){
-//   for (i=0; i<passwordLength-1; i++){ 
-//     var password = password + random3; 
-//   }
-// }
-
-// function writePassword() {
-//   var password = generatePassword();
-  
-//   var passwordText = document.querySelector("#password");
-
-//   passwordText.value = password;
-
-// }
+function writePassword() {
+      console.log("generate button works");
+      var password = generatePassword();
+        
+      var passwordText = document.querySelector("#password");
+      
+      passwordText.value = password;
+      
+}
 
 // Add event listener to generate button
 
 // >>ATTENTION<< generate password button does not work
-// document.getElementById("generate").addEventListener("click", writePassword());
+// generateBtn.addEventListener("click", writePassword());
 // document.getElementById("password").innerHTML= ""+ password;
 
+
+generateBtn.addEventListener("click", function() {
+      console.log("testing button");
+      display = writePassword();
+      console.log(display);
+});
 
