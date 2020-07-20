@@ -11,8 +11,6 @@ var specialCharactersArray = ["`", "!", "@", "#", "$", "%", "^", "&", "*", "(", 
 // This variable holds am array of numbers
 var numberCharacterArray = ["0", "1", "2", "3", "4,", "5", "6", "7", "8", "9"];
 
-
-
 // ------------------>Prompts <--------------------
 function passwordOptions() {
       // This will be the variable for the prompt that will hold the desire length of the password (8-128 characters)
@@ -59,13 +57,10 @@ function passwordOptions() {
 // ------------------>Random Character <--------------------
 
 function getRandom(arr) {
-
-      //we loop through the array once
       var randomValue = arr[Math.floor(Math.random() * arr.length)];
       console.log(randomValue);
       console.log("---------")
       return randomValue;
-
 }
 
 
