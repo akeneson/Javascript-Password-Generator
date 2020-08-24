@@ -6,3 +6,6 @@ The application created generates a random password based on the user's selected
 
 Anyone who require passwords that are unpredictable to decipher. Obviously a person that works in a highly secured position or even in a person's daily activities, such as needing undecipherable password for their bank account log in.
 
+## Deployed Application
+https://akeneson.github.io/Javascript-Password-Generator/
+
